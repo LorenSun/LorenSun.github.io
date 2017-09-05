@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Spring学习(一) | 初风 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="LorenSun">
+    
+    
+
+    <meta name="description" content="Spring学习(一)如何学习 掌握用法、 深入理解、 不断实践、 反复总结、 再次深入理解与实践 学习资源： Spring.io spring-framework   Spring简介(对象的容器)  Spring是一个开源框架，为了解决企业应用开发的复杂性而创建的，但现在已经不只应用于企业应用。  是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  从大小与开销两方面而言Spr">
+<meta name="keywords" content="Spring,JavaWeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring学习(一) | 初风">
+<meta property="og:url" content="http://likebreeze.com/2017/09/05/Spring学习-一/index.html">
+<meta property="og:site_name" content="初风">
+<meta property="og:description" content="Spring学习(一)如何学习 掌握用法、 深入理解、 不断实践、 反复总结、 再次深入理解与实践 学习资源： Spring.io spring-framework   Spring简介(对象的容器)  Spring是一个开源框架，为了解决企业应用开发的复杂性而创建的，但现在已经不只应用于企业应用。  是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  从大小与开销两方面而言Spr">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-05T15:14:03.521Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring学习(一) | 初风">
+<meta name="twitter:description" content="Spring学习(一)如何学习 掌握用法、 深入理解、 不断实践、 反复总结、 再次深入理解与实践 学习资源： Spring.io spring-framework   Spring简介(对象的容器)  Spring是一个开源框架，为了解决企业应用开发的复杂性而创建的，但现在已经不只应用于企业应用。  是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。  从大小与开销两方面而言Spr">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">初风</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          A breeze wafts the smell of roses.
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Spring学习(一)</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-09-05" class="post-meta__date date">2017-09-05</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/JavaWeb/">JavaWeb</a>, <a class="tags-link" href="/tags/Spring/">Spring</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h1 id="Spring学习-一"><a href="#Spring学习-一" class="headerlink" title="Spring学习(一)"></a>Spring学习(一)</h1><h2 id="如何学习"><a href="#如何学习" class="headerlink" title="如何学习"></a>如何学习</h2><ul>
+<li>掌握用法、</li>
+<li>深入理解、</li>
+<li>不断实践、</li>
+<li>反复总结、</li>
+<li><p>再次深入理解与实践</p>
+<p>学习资源：</p>
+<p><a href="http://spring.io/" target="_blank" rel="external">Spring.io</a></p>
+<p><a href="http://projects.spring.io/spring-framework" target="_blank" rel="external">spring-framework</a></p>
+</li>
+</ul>
+<h2 id="Spring简介-对象的容器"><a href="#Spring简介-对象的容器" class="headerlink" title="Spring简介(对象的容器)"></a>Spring简介(对象的容器)</h2><p>  Spring是一个开源框架，为了解决企业应用开发的复杂性而创建的，但现在已经不只应用于企业应用。<br>  是一个轻量级的控制反转（IoC）和面向切面（AOP）的容器框架。</p>
+<ul>
+<li>从大小与开销两方面而言Spring都是轻量型的</li>
+<li>通过控制反转（IoC）的技术达到松耦合的目的</li>
+<li>提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统及服务进行内聚性的开发。</li>
+<li>包含并管理应用对象的配置和生命周期，这个意义上是一种容器。</li>
+<li>将煎蛋的组件配置，组合成为复杂的应用，这个意义上是框架。</li>
+</ul>
+<h3 id="在Spring上开发"><a href="#在Spring上开发" class="headerlink" title="在Spring上开发"></a>在Spring上开发</h3><pre><code>简单、方便、快捷
+</code></pre><h3 id="Spring作用（负责管理项目中的所有对象）"><a href="#Spring作用（负责管理项目中的所有对象）" class="headerlink" title="Spring作用（负责管理项目中的所有对象）"></a>Spring作用（负责管理项目中的所有对象）</h3><ul>
+<li>一站式框架（正是因为spring框架性质是属于容器性质的，容器中装什么对象就有什么功能）</li>
+<li>看做是项目中对象的管家</li>
+<li>不仅不排斥其他框架，还能帮助其他框架管理对象</li>
+<li>aop支持</li>
+<li>ioc思想</li>
+<li>spring jdbc</li>
+<li>aop事物</li>
+<li>junit测试支持</li>
+</ul>
+<h3 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h3><h4 id="什么是（软件）框架"><a href="#什么是（软件）框架" class="headerlink" title="什么是（软件）框架"></a>什么是（软件）框架</h4><p>简单来说，框架就是制定一套规范或者规则，是用别人的舞台表演。</p>
+<h4 id="框架的特点"><a href="#框架的特点" class="headerlink" title="框架的特点"></a>框架的特点</h4><ul>
+<li>半成品</li>
+<li>封装了特定的处理流程和控制逻辑</li>
+<li>成熟的，不断升级改进的软件</li>
+</ul>
+<h4 id="框架和类库的区别"><a href="#框架和类库的区别" class="headerlink" title="框架和类库的区别"></a>框架和类库的区别</h4><ul>
+<li>框架一般是封装了逻辑、高内聚的，类库则是松散的工具组合</li>
+<li>框架专注于某一领域，库类则是更通用的。</li>
+</ul>
+<h4 id="为什么使用（软件）框架"><a href="#为什么使用（软件）框架" class="headerlink" title="为什么使用（软件）框架"></a>为什么使用（软件）框架</h4><ul>
+<li>软件系统日趋复杂</li>
+<li>重用度高，开发效率和质量提高</li>
+<li>软件设计人员要专注于对领域的了解，使需求分析更充分。</li>
+</ul>
+<h2 id="spring搭建"><a href="#spring搭建" class="headerlink" title="spring搭建"></a>spring搭建</h2><h3 id="导包-amp-创建一个对象"><a href="#导包-amp-创建一个对象" class="headerlink" title="导包&amp;创建一个对象"></a>导包&amp;创建一个对象</h3><p>使用spring要导入的最基础的包：</p>
+<ul>
+<li>Beans</li>
+<li>Core</li>
+<li>Context</li>
+<li>Expression<br>还有日志包org.apach.commots.logging.jar</li>
+</ul>
+<h3 id="约束引入"><a href="#约束引入" class="headerlink" title="约束引入"></a>约束引入</h3><p>新建一个xml文件（位置任意（建议放到src下），配置文件名任意（建议applicationContext））<br>XML Catalog中，导入约束schema/beans</p>
+<p>key type更改为 Schema location</p>
+<p>在xml文件中写入根元素<beans></beans>，然后切换到设计视图（Design）</p>
+<p>右键beans,更改命名空间</p>
+<h3 id="注册对象到容器-amp-测试"><a href="#注册对象到容器-amp-测试" class="headerlink" title="注册对象到容器&amp;测试"></a>注册对象到容器&amp;测试</h3><h4 id="将User对象交给spring容器管理"><a href="#将User对象交给spring容器管理" class="headerlink" title="将User对象交给spring容器管理"></a>将User对象交给spring容器管理</h4><p><code>&lt;bean name = &quot;user&quot; class = &quot;com.bean.User&quot;&gt;&lt;/bean&gt;</code></p>
+<h4 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h4><ul>
+<li>创建容器对象</li>
+</ul>
+<p><code>ApplicationContext ac  = new ClassPathXmlApplicationContext(&quot;applicationContext.xml&quot;);</code></p>
+<ul>
+<li>向容器“要”user对象</li>
+</ul>
+<p><code>User u  = (User) ac.getBean(&quot;user&quot;);</code></p>
+<ul>
+<li>打印user对象</li>
+</ul>
+<p><code>System.out.println(u);</code></p>
+<h2 id="Spring概念"><a href="#Spring概念" class="headerlink" title="Spring概念"></a>Spring概念</h2><h3 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h3><h4 id="什么是IOC-Inverse-Of-Control"><a href="#什么是IOC-Inverse-Of-Control" class="headerlink" title="什么是IOC(Inverse Of Control)"></a>什么是IOC(Inverse Of Control)</h4><p>将我们创建对象的方式反转了，以前对象的创建是由我们开发人员自己维护，包括依赖关系也是自己注入。</p>
+<p>使用了spring之后，对象的创建以及依赖关系可以由spring完成创建以及注入。</p>
+<p>反转控制就是反转了对象的创建方式，从我们自己创建反转给了程序（Spring）。</p>
+<blockquote>
+<p>控制反转，控制权的转移，需要对象时，申请一个对象。</p>
+<p>获得依赖对象的过程被反转。</p>
+</blockquote>
+<h4 id="DI（Dependency-Injection依赖注入）"><a href="#DI（Dependency-Injection依赖注入）" class="headerlink" title="DI（Dependency Injection依赖注入）"></a>DI（Dependency Injection依赖注入）</h4><p>需要IOC的环境，是实现IOC思想的方式(技术)。</p>
+<p>注入方式：</p>
+<ul>
+<li>set方法注入</li>
+<li>构造方法注入</li>
+<li>字段注入（不推荐）</li>
+</ul>
+<p>注入类型：</p>
+<ul>
+<li>值类注入 #八大基本数据类型</li>
+<li>引用类注入 #将依赖对象注入</li>
+</ul>
+<p>目的：创建对象并且组装对象之间的关系。</p>
+<h3 id="applicationContext-amp-BeanFactory"><a href="#applicationContext-amp-BeanFactory" class="headerlink" title="applicationContext&amp;BeanFactory"></a>applicationContext&amp;BeanFactory</h3><h4 id="BeanFactory借口"><a href="#BeanFactory借口" class="headerlink" title="BeanFactory借口"></a>BeanFactory借口</h4><ul>
+<li>spring原始接口，针对原始接口的实现类功能较为单一</li>
+<li>BeanFactory借口实现类的容器，特点是每次在获得对象时才会创建对象</li>
+</ul>
+<h4 id="ApplicationContext"><a href="#ApplicationContext" class="headerlink" title="ApplicationContext"></a>ApplicationContext</h4><ul>
+<li>每次容器启动时创建容器中配制的所有对象。提供给更多功能</li>
+<li>从类路径下加载配置文件：ClassPathXmlApplicationContext</li>
+<li>从硬盘绝对路径下架在配置文件：FileSystemXmlApplicationContext(“d://xxx/xxx”)</li>
+</ul>
+<p>结论：web开发中使用applicationContext,在资源匮乏的环境可以使用BeanFactory。</p>
+<h2 id="spring配置详解"><a href="#spring配置详解" class="headerlink" title="spring配置详解"></a>spring配置详解</h2><h3 id="Bean元素"><a href="#Bean元素" class="headerlink" title="Bean元素"></a>Bean元素</h3><p>使用该元素描述需要spring容器管理的对象</p>
+<ul>
+<li>class属性：被管理对象的完整类名。</li>
+<li>name属性：给呗管理的对象起个名字，获得对象是根据该名称获得对象。<blockquote>
+<p>可以重复，可以使用特殊字符</p>
+</blockquote>
+</li>
+<li><p>id属性：与name属性相同，</p>
+<blockquote>
+<p>名称不能重复，不能使用特殊字符。</p>
+</blockquote>
+<p>结论：尽量使用name属性</p>
+</li>
+</ul>
+<h3 id="spring创建对象的三种方式"><a href="#spring创建对象的三种方式" class="headerlink" title="spring创建对象的三种方式"></a>spring创建对象的三种方式</h3><ul>
+<li>创建方式1：空参构造创建</li>
+<li>创建方式2：静态工厂（了解）</li>
+<li>创建方式3：实例工厂（了解）</li>
+</ul>
+<h3 id="Bean元素进阶"><a href="#Bean元素进阶" class="headerlink" title="Bean元素进阶"></a>Bean元素进阶</h3><h4 id="scope属性"><a href="#scope属性" class="headerlink" title="scope属性"></a>scope属性</h4><ul>
+<li>singleton(默认值)：单例对象，被表示为单例的对象，在spring容器中只会存在一个实例。</li>
+<li>prototype（多例原型）：被标志为多例子的对象，每次在获得时才会创建，每次创建都是新的对象。<br>整合struts2时，ActionBean必须配置为多例的。</li>
+<li>request(了解)：web环境下，对象与request生命周期一致</li>
+<li>session（了解）：web环境下，对象与session生命周期一致</li>
+</ul>
+<h4 id="生命周期属性（了解）"><a href="#生命周期属性（了解）" class="headerlink" title="生命周期属性（了解）"></a>生命周期属性（了解）</h4><ul>
+<li>init-method（配置一个方法作为生命周期初始化方法，spring会在对象创建之后立即调用）</li>
+<li>destroy-method（配置一个方法作为生命周期的销毁方法，spring容器在关闭并销毁所有容器中的对象之前调用）</li>
+</ul>
+<h3 id="spring的分模块配置"><a href="#spring的分模块配置" class="headerlink" title="spring的分模块配置"></a>spring的分模块配置</h3><p>导入其他spring配置文件<br><code>&lt;import resource=&quot;&quot;/&gt;</code></p>
+<h2 id="spring属性注入"><a href="#spring属性注入" class="headerlink" title="spring属性注入"></a>spring属性注入</h2><h3 id="注入方式"><a href="#注入方式" class="headerlink" title="注入方式"></a>注入方式</h3><h4 id="set方法注入（重点）"><a href="#set方法注入（重点）" class="headerlink" title="set方法注入（重点）"></a>set方法注入（重点）</h4><p>set方式注入：<br><code>&lt;bean name = &quot;user&quot; class = &quot;com.bean.User&quot;&gt;</code></p>
+<blockquote>
+<p>值类型注入：为User对象中名为name的属性注入tom为值</p>
+</blockquote>
+<p><code>&lt;property name = &quot;name&quot; value=&quot;tom&quot;&gt;&lt;/property&gt;</code></p>
+<p><code>&lt;property name = &quot;age&quot; value=&quot;18&quot;&gt;&lt;/property&gt;</code></p>
+<blockquote>
+<p>引用类型注入：为car属性注入下方配置的car对象</p>
+</blockquote>
+<p><code>&lt;property name = &quot;car&quot; ref=&quot;car&quot;&gt;&lt;/property&gt;</code></p>
+<p><code>&lt;/bean&gt;</code></p>
+<blockquote>
+<p>将car对象配置到容器中</p>
+</blockquote>
+<p><code>&lt;bean name = &quot;car&quot; class = &quot;com.bean.Car&quot;&gt;</code></p>
+<p><code>&lt;property name = &quot;name&quot; value=&quot;兰博基尼&quot;&gt;&lt;/property&gt;</code></p>
+<p><code>&lt;property name = &quot;color&quot; value=&quot;黄色&quot;&gt;&lt;/property&gt;</code></p>
+<p><code>&lt;/bean&gt;</code></p>
+<h4 id="构造方法注入"><a href="#构造方法注入" class="headerlink" title="构造方法注入"></a>构造方法注入</h4><blockquote>
+<p>构造函数注入</p>
+</blockquote>
+<p><code>&lt;bean name = &quot;user&quot; class=&quot;com.bean.User&quot;&gt;</code></p>
+<p>若指定构造函数中name在前，car在后，则设置index属性为0；<br>若构造函数有多个，有构造函数中name的值为integer，应设置type属性为某数据类型完整类名。</p>
+<blockquote>
+<p>name属性：构造函数的参数名</p>
+<p>index属性：构造函数的参数索引</p>
+<p>type属性：构造函数的参数类型</p>
+</blockquote>
+<p><code>&lt;construct-arg name =&quot;name&quot; index=&quot;0&quot; type =“java.lang.String” value=&quot;jerry&quot; &gt;&lt;/construct-arg&gt;</code></p>
+<p><code>&lt;construct-arg name =&quot;car&quot; ref=&quot;car&quot; inedx=&quot;1&quot;&gt;&lt;/construct-arg&gt;</code></p>
+<p><code>&lt;/bean&gt;</code></p>
+<h4 id="p名称空间注入（了解）"><a href="#p名称空间注入（了解）" class="headerlink" title="p名称空间注入（了解）"></a>p名称空间注入（了解）</h4><ul>
+<li>导入p名称空间 xmlns:p=”<a href="http://www.springframework.org/schema/p" target="_blank" rel="external">http://www.springframework.org/schema/p</a>“</li>
+<li>使用p:属性完成注入<pre><code>|--值类型：P：属性名= &quot;值&quot;
+|--对象类型： p:属性名-ref=&quot;bean名称&quot;
+</code></pre><blockquote>
+<p>实际上还是set方法</p>
+</blockquote>
+</li>
+</ul>
+<p><code>&lt;bean name = &quot;user&quot; class = &quot;com.bean.User&quot; p:name=&quot;jack&quot; p:age=&quot;16&quot; p:car-ref=&quot;兰博基尼&quot;&gt;&lt;/bean&gt;</code></p>
+<h4 id="spel注入（了解）"><a href="#spel注入（了解）" class="headerlink" title="spel注入（了解）"></a>spel注入（了解）</h4><p>  spel注入：spring Expression language spring表达式语言</p>
+<p>  ``<bean name="user" class="com.bean.User"></bean></p>
+<p>  <property name="name" value="#{user.name}"><property></property></property></p>
+<p>  <property name="age" value="#{user.age}"><property></property></property></p>
+<p>  <property name="car" ref="car"><property></property></property></p>
+<p>  ``</p>
+<h3 id="复杂类型注入"><a href="#复杂类型注入" class="headerlink" title="复杂类型注入"></a>复杂类型注入</h3><h4 id="array注入"><a href="#array注入" class="headerlink" title="array注入"></a>array注入</h4><p>  <code>&lt;bean name = &quot;cb&quot; class = &quot;com.bean.CollectionBean&quot;&gt;</code></p>
+<blockquote>
+<p>如果数组中只准备注入一个值（对象），直接使用value和ref即可</p>
+</blockquote>
+<p>//  <code>&lt;property name=&quot;arr&quot; value&gt;&lt;/property&gt;</code></p>
+<blockquote>
+<p>多元素array注入，多个元素注入</p>
+</blockquote>
+<p>  <code>&lt;property name=&quot;arr&quot; &gt;</code></p>
+<pre><code>``&lt;array&gt;``
+
+  ``&lt;value&gt;tom&lt;/value&gt;``
+
+  ``&lt;value&gt;jerry&lt;/value&gt;``
+
+  ``&lt;ref bean = &quot;user4&quot;/&gt;``
+
+``&lt;/array&gt;``
+</code></pre><p>  <code>&lt;/property&gt;</code></p>
+<h4 id="List注入"><a href="#List注入" class="headerlink" title="List注入"></a>List注入</h4><blockquote>
+<p>如果LIST中只准备注入一个值（对象），直接使用value和ref即可</p>
+</blockquote>
+<p>//  <code>&lt;property name= &quot;list&quot; balue=&quot;jack&quot;&gt;</code></p>
+<p><code>&lt;property name = &quot;list&quot;&gt;</code></p>
+<pre><code>``&lt;list&gt;``
+
+  ``&lt;value&gt;jack&lt;/value&gt;``
+
+  ``&lt;value&gt;rose&lt;/value&gt;``
+
+  ``&lt;ref bean=&quot;user4&quot;/&gt;``
+
+``&lt;/list&gt;``
+</code></pre><p><code>&lt;/property&gt;</code></p>
+<h4 id="map注入"><a href="#map注入" class="headerlink" title="map注入"></a>map注入</h4><p><code>&lt;property name = &quot;map&quot;&gt;</code></p>
+<pre><code>``&lt;map&gt;``
+
+  ``&lt;entry key=&quot;url&quot; value=&quot;jdbc:mysql:///crm&quot;&gt;&lt;/entry&gt;``
+
+  ``&lt;entry key=&quot;user&quot; value-ref=&quot;user4&quot;&gt;&lt;/entry&gt;``
+
+  ``&lt;entry key-ref=&quot;user3&quot; value-ref=&quot;user2&quot;&gt;&lt;/entry&gt;``
+
+``&lt;/map&gt;``
+</code></pre><p><code>&lt;/property&gt;</code></p>
+<h4 id="properties类型注入"><a href="#properties类型注入" class="headerlink" title="properties类型注入"></a>properties类型注入</h4><p><code>&lt;property name = &quot;prop&quot;&gt;</code></p>
+<pre><code>``&lt;props&gt;``
+
+  ``&lt;prop key=&quot;diverClass&quot;&gt;com.jdbc.mysql.Driver&lt;/prop&gt;``
+
+  ``&lt;prop key=&quot;userName&quot;&gt;root&lt;/prop&gt;``
+
+  ``&lt;prop key=&quot;password&quot;&gt;1234&lt;/prop&gt;``
+
+``&lt;/props&gt;``
+</code></pre><p><code>&lt;/property&gt;</code></p>
+<p>  <code>&lt;/bean&gt;</code></p>
+<h2 id="使用注解配置spring"><a href="#使用注解配置spring" class="headerlink" title="使用注解配置spring"></a>使用注解配置spring</h2><h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><p>导包4+2+spring-aop</p>
+<ul>
+<li>为主配置文件引入新的命名空间（约束）</li>
+<li>开启使用注解代替配置文件</li>
+</ul>
+<p>指定扫描com.bean包下的所有类中的注解</p>
+<p>注意：扫描包时，会扫描指定包下的所有子包</p>
+<p><code>&lt;context:component-scan base-package=&quot;com.bean&quot;&gt;&lt;/context:component-scan&gt;</code></p>
+<ul>
+<li>在类中使用注解</li>
+</ul>
+<p><code>@Component(&quot;user&quot;)</code></p>
+<p>就相当于在xml文件中的</p>
+<p><code>&lt;bean name = &quot;user&quot; class = &quot;com.bean.User&quot;&gt;</code><br>其余一些注解，为了区分对象</p>
+<h3 id="将对象注册到容器"><a href="#将对象注册到容器" class="headerlink" title="将对象注册到容器"></a>将对象注册到容器</h3><p><code>@Service(&quot;user&quot;)</code> //Service层</p>
+<p><code>@Control(&quot;user&quot;)</code> //Web层</p>
+<p><code>@Ropositor(&quot;user&quot;)</code> //dao层</p>
+<p>作用与Component相同，只是为了区分</p>
+<h3 id="修改对象的作用范围"><a href="#修改对象的作用范围" class="headerlink" title="修改对象的作用范围"></a>修改对象的作用范围</h3><p><code>@Scope(scopeName=&quot;singleton|property&quot;)</code></p>
+<p>//制定对象的作用返回</p>
+<h3 id="值类型注入"><a href="#值类型注入" class="headerlink" title="值类型注入"></a>值类型注入</h3><p><code>@value(&quot;tom&quot;)</code></p>
+<ul>
+<li>将注解放在变量上（通过反射的Field字段赋值）（破坏了对象的封装性）</li>
+<li>将注解放在set方法上（通过set方法赋值）（推荐使用）</li>
+</ul>
+<h3 id="引用类型注入"><a href="#引用类型注入" class="headerlink" title="引用类型注入"></a>引用类型注入</h3><p>  Car对象 @Component(“Car”)<br>  注入给User，将注解放在private Car car上</p>
+<ul>
+<li><p><code>@Autowired</code></p>
+<p>//自动装配，若有多个类型一致的对象，将无法选择具体注入哪个对象</p>
+</li>
+<li><p><code>@Qualifier(&quot;car2&quot;)</code></p>
+<p>//使用Qualifier注解告诉spring容器自动装配哪个名称的对象</p>
+</li>
+<li><p><code>@resource(name=&quot;car2&quot;)</code></p>
+<p>//手动注入，指定注入哪个名称的对象（推荐）</p>
+</li>
+</ul>
+<h3 id="初始化-销毁方法"><a href="#初始化-销毁方法" class="headerlink" title="初始化|销毁方法"></a>初始化|销毁方法</h3><p>  <code>@PostConstruct</code></p>
+<p>  //在对象被创建后调用，相当于init-method</p>
+<p>  <code>@PreDestroy</code></p>
+<p>  //在对象销毁之前调用，相当于destory-method</p>
+<h2 id="STS插件"><a href="#STS插件" class="headerlink" title="STS插件"></a>STS插件</h2><h2 id="spring与Junit整合测试"><a href="#spring与Junit整合测试" class="headerlink" title="spring与Junit整合测试"></a>spring与Junit整合测试</h2><h3 id="导包4-2-aop-test"><a href="#导包4-2-aop-test" class="headerlink" title="导包4+2+aop+test"></a>导包4+2+aop+test</h3><h3 id="配置注解"><a href="#配置注解" class="headerlink" title="配置注解"></a>配置注解</h3><ul>
+<li>@RunWith(SpringJunit4ClassRunner.class)//帮我们创建容器</li>
+<li>@ContextConfiguration（”classpath:applicationContext.xml”）//指定创建容器时使用哪个配置文件</li>
+<li><p>获得User</p>
+<pre><code>//将名为User的对象注入到u变量中
+</code></pre><p>  <code>@Resource(name=&quot;user&quot;)</code></p>
+<p>  <code>private User u；</code></p>
+</li>
+</ul>
+<h3 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h3><h2 id="AOP（Aspect-Oriented-Programming，面向切面编程）"><a href="#AOP（Aspect-Oriented-Programming，面向切面编程）" class="headerlink" title="AOP（Aspect Oriented Programming，面向切面编程）"></a>AOP（Aspect Oriented Programming，面向切面编程）</h2><h3 id="AOP思想"><a href="#AOP思想" class="headerlink" title="AOP思想"></a>AOP思想</h3><p>横向重复代码，纵向抽取</p>
+<h3 id="动态代理"><a href="#动态代理" class="headerlink" title="动态代理"></a>动态代理</h3><p>动态代理：对目标对象中的方法进行增强<br>通过动态代理可以体现AOP思想，仅仅是AOP的一个体现形式</p>
+<h3 id="Spring中的AOP"><a href="#Spring中的AOP" class="headerlink" title="Spring中的AOP"></a>Spring中的AOP</h3><p>spring能够为容器中管理的对象生成动态代理对象<br>spring封装了动态代理代码，就不需要手写动态代理代码；还封装了cglib代理；–&gt;可以对任何类进行代理增强<br>以前我们要使用动态代理，我们需要自己调用下面这个方法。<br><code>Proxy.newProxyInstance(xx,xx,xx)</code></p>
+<p>spring能帮我们生成代理对象</p>
+<h3 id="spring实现aop的原理"><a href="#spring实现aop的原理" class="headerlink" title="spring实现aop的原理"></a>spring实现aop的原理</h3><h4 id="动态代理（优先）"><a href="#动态代理（优先）" class="headerlink" title="动态代理（优先）"></a>动态代理（优先）</h4><p>被代理对象必须要实现接口，才能产生代理对象。若果没有借口则不能使用动态代理技术。</p>
+<h4 id="cglib代理（没有接口）"><a href="#cglib代理（没有接口）" class="headerlink" title="cglib代理（没有接口）"></a>cglib代理（没有接口）</h4><p>第三方代理技术，可以对任何类生成代理，代理的原理是对目标对象进行继承代理，如果目标对象被final修饰，那么该类无法被cglib代理。</p>
+<h4 id="AOP名词学习"><a href="#AOP名词学习" class="headerlink" title="AOP名词学习"></a>AOP名词学习</h4><ul>
+<li>Joinpoint(连接点): 目标对象中，所有可（用代理技术）增强的方法。</li>
+<li>Pointcut(切入点):  目标对象，需要|已经要增强的方法。</li>
+<li>Advice(通知/增强): 增强的代码</li>
+<li>Target(目标对象):  被代理对象</li>
+<li>Weaving(织入):（v.）将通知应用到切入点    </li>
+<li>Proxy（代理）:将通知织入到目标对象后，形成代理对象</li>
+<li>aspect（切面）:切入点+通知</li>
+</ul>
+<h4 id="Spring中的AOP演示"><a href="#Spring中的AOP演示" class="headerlink" title="Spring中的AOP演示"></a>Spring中的AOP演示</h4><h5 id="步骤（XML配置）"><a href="#步骤（XML配置）" class="headerlink" title="步骤（XML配置）"></a>步骤（XML配置）</h5><ul>
+<li>导包4+2+2+2</li>
+<li>准备目标对象</li>
+<li>准备通知<br>通知种类：</li>
+</ul>
+<p>前置通知–&gt;目标方法运行之前调用</p>
+<p><code>public void before(){System.out.println(&quot;前置通知&quot;);}</code></p>
+<p>后置通知（若出现异常则不会调用）–&gt;目标方法运行之后通知</p>
+<p><code>public void afterReturning(){System.out.println(&quot;后置通知（出现异常不调用）&quot;);}</code></p>
+<p>环绕通知–&gt;目标方法运行之前和之后都通知</p>
+<p>public Object around(ProceedingJoinPoint pjp) throws Throwable{</p>
+<pre><code>System.out.println(&quot;环绕通知之前的部分&quot;);
+
+    Object proceed = pjp.proceed();//调用目标方法
+
+    System.out.println(&quot;环绕通知之后的部分&quot;);
+
+return proceed;
+
+}
+</code></pre><p>异常拦截通知–&gt;若出现异常，就会调用</p>
+<p><code>public void afterException(){System.out.println(&quot;出现异常&quot;);}</code></p>
+<p>后置通知（无论是否出现异常都会调用）–&gt;目标方法运行之后通知</p>
+<p><code>public void after(){System.out.println(&quot;后置通知(出现异常也会调用)&quot;);}</code></p>
+<ul>
+<li>配置进行织入，将通知织入目标对象</li>
+</ul>
+<p>准备工作：导入AOP（约束）命名空间<br>=<br>1、配置目标对象<br><code>&lt;bean name=&quot;userServiceTarget&quot; class=&quot;com.service.UserServicelmpl&quot;&gt;&lt;/bean&gt;</code></p>
+<p>2、配置通知对象<br><code>&lt;bean name=&quot;myAdvice&quot; class=&quot;com.b_springaop.MyAdvice&quot;&gt;&lt;/bean&gt;</code></p>
+<p>3、配置将通知织入目标对象</p>
+  <aop:config>
+
+<pre><code>//配置切入点
+``public void com.service.UserServicelmpl.save()``
+
+//省略public
+``void com.service.UserServicelmpl.save()``
+
+//简化
+``* com.service.UserServicelmpl.save()``
+
+//简化
+``* com.service.UserServicelmpl.*()``
+
+//简化
+``* com.service.UserServicelmpl.*(..)``
+
+//简化
+``* com.service.*Servicelmpl.*(..)``
+
+    &lt;aop:pointcut expression=&quot;executiion(* executiion(com.service.*Servicelmpl.*(..))&quot; id=&quot;pc&quot;/&gt;
+
+    &lt;aop:aspect ref=&quot;myAdvice&quot;&gt;
+
+&lt;aop:before method=&quot;before&quot; pointcut-ref=&quot;pc&quot;/&gt;//指定名为before的前置方法作为前置通知
+
+&lt;aop:after-returning method=&quot;afterReturning&quot; pointcut-ref=&quot;pc&quot;/&gt;//后置
+
+&lt;aop:around method=&quot;around&quot; pointcut-ref=&quot;pc&quot;/&gt;//环绕
+
+&lt;aop:after-throwing method=&quot;afterException&quot; pointcut-ref=&quot;pc&quot;/&gt;//异常拦截通知
+
+&lt;aop:after method=&quot;after&quot; pointcut-ref=&quot;pc&quot;/&gt;//后置
+    &lt;/aop:aspect&gt;
+</code></pre><h5 id="步骤（注解配置）"><a href="#步骤（注解配置）" class="headerlink" title="步骤（注解配置）"></a>步骤（注解配置）</h5><ul>
+<li>导包4+2</li>
+<li>准备目标对象</li>
+<li>准备通知对象</li>
+<li><p>开启使用注解完成织入<br>@Aspect //表示该类是一个通知<br>@Before(“executiion(<em> com.service.</em>Servicelmpl.*(..))”) //指定该方法为前置通知，并指定切入点</p>
+<p></p></li></ul></aop:config><p></p>
+
+
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143269"></script>
+    <!-- UY END -->
+
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2017. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
