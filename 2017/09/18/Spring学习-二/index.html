@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Spring学习(二) | 初风 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="LorenSun">
+    
+    
+
+    <meta name="description" content="spring整合JDBCspring中提供了一个可以操作数据库的对象，对象封装了jdbc技术。JDBCTemplate模板对象与DBUtils中的queryRunner非常相似准备工作1、导包  4+2 spring-test、spring-aop、junit4类库 c3p0连接池+DBC驱动 spring-jdbc+spring-tx事物  2、准备数据库public class Demo {">
+<meta name="keywords" content="Spring,JavaWeb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring学习(二) | 初风">
+<meta property="og:url" content="http://likebreeze.com/2017/09/18/Spring学习-二/index.html">
+<meta property="og:site_name" content="初风">
+<meta property="og:description" content="spring整合JDBCspring中提供了一个可以操作数据库的对象，对象封装了jdbc技术。JDBCTemplate模板对象与DBUtils中的queryRunner非常相似准备工作1、导包  4+2 spring-test、spring-aop、junit4类库 c3p0连接池+DBC驱动 spring-jdbc+spring-tx事物  2、准备数据库public class Demo {">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-18T02:55:59.973Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring学习(二) | 初风">
+<meta name="twitter:description" content="spring整合JDBCspring中提供了一个可以操作数据库的对象，对象封装了jdbc技术。JDBCTemplate模板对象与DBUtils中的queryRunner非常相似准备工作1、导包  4+2 spring-test、spring-aop、junit4类库 c3p0连接池+DBC驱动 spring-jdbc+spring-tx事物  2、准备数据库public class Demo {">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">初风</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          无论眼界多高，也必须脚踏实地。无论梦想和愿望是多么高远，现实中的每一天都要竭尽全力踏实重复简单的工作。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Spring学习(二)</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-09-18" class="post-meta__date date">2017-09-18</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/JavaWeb/">JavaWeb</a>, <a class="tags-link" href="/tags/Spring/">Spring</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="spring整合JDBC"><a href="#spring整合JDBC" class="headerlink" title="spring整合JDBC"></a>spring整合JDBC</h2><p>spring中提供了一个可以操作数据库的对象，对象封装了jdbc技术。<br>JDBCTemplate模板对象<br>与DBUtils中的queryRunner非常相似<br>准备工作<br>1、导包</p>
+<ul>
+<li>4+2</li>
+<li>spring-test、spring-aop、junit4类库</li>
+<li>c3p0连接池+DBC驱动</li>
+<li>spring-jdbc+spring-tx事物</li>
+</ul>
+<p>2、准备数据库<br>public class Demo {</p>
+<pre><code>@Test
+public void fun1() throws PropertyVetoException{
+    //0\准备连接池
+    ComboPooledDataSource dataSource = new ComboPooledDataSource();
+    dataSource.setDriverClass(&quot;com.mysql.jdbc.Driver&quot;);
+    dataSource.setJdbcUrl(&quot;jdbc:mysql:///sun&quot;);
+    dataSource.setUser(&quot;root&quot;);
+    dataSource.setPassword(&quot;root&quot;);
+
+    //1\创建jdbc模板对象
+    JdbcTemplate jt = new JdbcTemplate();
+    jt.setDataSource(dataSource);
+
+    //2\书写sql，并执行
+    String sql=&quot;insert into t_user values(null,&apos;Rose&apos;)&quot;;
+
+    jt.update(sql);
+
+}
+</code></pre><p>增删改查中的查<br>@Override<br>    public User getById(Integer id) {<br>        // TODO Auto-generated method stub<br>        String sql = “select * from t_user where id = ?”;<br>        return jt.queryForObject(sql,new RowMapper<user>(){</user></p>
+<pre><code>        @Override
+        public User mapRow(ResultSet rs, int arg1) throws SQLException {
+
+            User u = new User();
+            u.setId(rs.getInt(&quot;id&quot;));
+            u.setName(rs.getString(&quot;name&quot;));
+            return u;
+        }},id);
+}
+</code></pre><p>applicationContext.xml配置</p>
+<pre><code>&lt;!-- 1、将连接池放入spring容器 --&gt;
+&lt;bean name = &quot;dataSource&quot; class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
+    &lt;property name=&quot;jdbcUrl&quot; value=&quot;jdbc:mysql:///sun&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;driverClass&quot; value=&quot;com.mysql.jdbc.Driver&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;user&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;root&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 2、将JDBCTemplate放入spring容器 --&gt;
+&lt;bean name=&quot;jdbcTemplate&quot; class=&quot;org.springframework.jdbc.core.JdbcTemplate&quot;&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+&lt;!-- 3、将UserDao放入spring容器 --&gt;
+&lt;bean name=&quot;userDao&quot; class=&quot;com.a_jdbctemplate.UserDaoImpl&quot;&gt;
+    &lt;property name = &quot;jt&quot; ref=&quot;jdbcTemplate&quot;&gt;&lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><h2 id="spring中aop事物"><a href="#spring中aop事物" class="headerlink" title="spring中aop事物"></a>spring中aop事物</h2><h3 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h3><h4 id="事务特性：acid"><a href="#事务特性：acid" class="headerlink" title="事务特性：acid"></a>事务特性：acid</h4><blockquote>
+<p>ACID，指数据库事务正确执行的四个基本要素的缩写。包含：原子性（Atomicity）、一致性（Consistency）、隔离性（Isolation）、持久性（Durability）。一个支持事务（Transaction）的数据库，必需要具有这四种特性，否则在事务过程（Transaction processing）当中无法保证数据的正确性，交易过程极可能达不到交易方的要求。</p>
+</blockquote>
+<h4 id="事务并发问题"><a href="#事务并发问题" class="headerlink" title="事务并发问题"></a>事务并发问题</h4><p>1、赃读</p>
+<blockquote>
+<p>一个事务读取了另一个事务未提交的数据。事务A：张三妻子给张三转账100元。事务B：张三查询余额。事务A转账后（还未提交），事务B查询多了100元。事务A由于某种问题，比如超时，进行回滚。事务B查询到的数据是假数据。脏读本质上是读写操作的冲突，解决办法是写完之后再读。</p>
+</blockquote>
+<p>2、不可重复读</p>
+<blockquote>
+<p>一个事务两次读取同一个数据，两次读取的数据不一致。事务A：张三妻子给张三转账100元。事务B：张三两次查询余额。事务B第一次查询余额，事务A还没有转账，第二次查询余额，事务A已经转账了，导致一个事务中，两次读取同一个数据，读取的数据不一致。不可重复读本质上是读写操作的冲突，解决办法是读完再写。</p>
+</blockquote>
+<p>3、幻读</p>
+<blockquote>
+<p>一个事务两次读取一个范围的记录，两次读取的记录数不一致。事务A：张三妻子两次查询张三有几张银行卡。事务B：张三新办一张银行卡。事务A第一次查询银行卡数的时候，张三还没有新办银行卡，第二次查询银行卡数的时候，张三已经新办了一张银行卡，导致两次读取的银行卡数不一样。幻象读本质上是读写操作的冲突，解决办法是读完再写。</p>
+</blockquote>
+<h4 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h4><p>1、读未提交<br>2、读已提交<br>4、可重复读<br>8、串行化</p>
+<h3 id="spring封装了事务管理代码"><a href="#spring封装了事务管理代码" class="headerlink" title="spring封装了事务管理代码"></a>spring封装了事务管理代码</h3><h4 id="事务操作"><a href="#事务操作" class="headerlink" title="事务操作"></a>事务操作</h4><ul>
+<li>打开事务</li>
+<li>提交事务</li>
+<li>回滚事务</li>
+</ul>
+<h4 id="实务操作对象"><a href="#实务操作对象" class="headerlink" title="实务操作对象"></a>实务操作对象</h4><p>1、因为在不同平台，操作事务的代码各不相同，因此spring提供了一个接口<br>2、PlatformTransactionManager接口（spring中事务管理最为核心的的对象就是TransactionManager对象）</p>
+<ul>
+<li>DataSourceCTransactionManager</li>
+<li>HibernateTransactionManager<br>3、spring管理事务的属性介绍<br>事务的隔离级别<br>1、读未提交<br>2、读已提交<br>4、可重复读<br>8、串行化<br>是否只读 ：true只读，false可操作<br>事务的传播行为：决定业务方法之间调用，事务如何处理<br>PROPAGION_XXX :事务的传播行为</li>
+<li>保证同一个事务中<br>PROPAGATION_REQUIRED 支持当前事务，如果不存在 就新建一个(默认)<br>PROPAGATION_SUPPORTS 支持当前事务，如果不存在，就不使用事务<br>PROPAGATION_MANDATORY 支持当前事务，如果不存在，抛出异常</li>
+<li>保证没有在同一个事务中<br>PROPAGATION_REQUIRES_NEW 如果有事务存在，挂起当前事务，创建一个新的事务<br>PROPAGATION_NOT_SUPPORTED 以非事务方式运行，如果有事务存在，挂起当前事务<br>PROPAGATION_NEVER 以非事务方式运行，如果有事务存在，抛出异常<br>PROPAGATION_NESTED 如果当前事务存在，则嵌套事务执行<h3 id="spring管理事务方式"><a href="#spring管理事务方式" class="headerlink" title="spring管理事务方式"></a>spring管理事务方式</h3></li>
+<li>编码式<br>1、将核心事务管理其配置到spring容器</li>
+<li>xml配置（aop）（重要）</li>
+<li>注解配置（aop）（重要）</li>
+</ul>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143269"></script>
+    <!-- UY END -->
+
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2017. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
