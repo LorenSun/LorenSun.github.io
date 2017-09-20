@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Python基础 | 初风 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="LorenSun">
+    
+    
+
+    <meta name="description" content="linux命令ls /cd /pwd /touch /mkdir /vi /cat /mroe /gedit /history /rm /rmdir /mroe /tree /ln /mv /grep /cp/find /tar /which /cal /date /ps /kill /df /du /ifconfig /su /whoami 重定向:把显示结果存储 ls &amp;gt;xxx.txt">
+<meta name="keywords" content="linux,Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python基础 | 初风">
+<meta property="og:url" content="http://likebreeze.com/2017/09/07/Python/index.html">
+<meta property="og:site_name" content="初风">
+<meta property="og:description" content="linux命令ls /cd /pwd /touch /mkdir /vi /cat /mroe /gedit /history /rm /rmdir /mroe /tree /ln /mv /grep /cp/find /tar /which /cal /date /ps /kill /df /du /ifconfig /su /whoami 重定向:把显示结果存储 ls &amp;gt;xxx.txt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-20T14:23:11.652Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python基础 | 初风">
+<meta name="twitter:description" content="linux命令ls /cd /pwd /touch /mkdir /vi /cat /mroe /gedit /history /rm /rmdir /mroe /tree /ln /mv /grep /cp/find /tar /which /cal /date /ps /kill /df /du /ifconfig /su /whoami 重定向:把显示结果存储 ls &amp;gt;xxx.txt">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">初风</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          无论眼界多高，也必须脚踏实地。无论梦想和愿望是多么高远，现实中的每一天都要竭尽全力踏实重复简单的工作。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Python基础</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-09-07" class="post-meta__date date">2017-09-07</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/Python/">Python</a>, <a class="tags-link" href="/tags/linux/">linux</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="linux命令"><a href="#linux命令" class="headerlink" title="linux命令"></a>linux命令</h2><p>ls /cd /pwd /touch /mkdir /vi /cat /mroe /gedit /history /rm /rmdir /mroe /tree /ln /mv /grep /cp<br>/find /tar /which /cal /date /ps /kill /df /du /ifconfig /su /whoami</p>
+<p>重定向:把显示结果存储</p>
+<p>ls &gt;xxx.txt //重新生成</p>
+<p>ls &gt;&gt;xxx.txt //追加，若不存在则创建</p>
+<p>相对路径:从当线路经开始算起的路径</p>
+<p>绝对路径:从根目录开始算起的路径</p>
+<p>cd - 返回</p>
+<p>cd ~ home目录</p>
+<p>ctrl + c 不执行</p>
+<h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><ul>
+<li>rwx -&gt;可读可写可执行</li>
+<li>r– -&gt;只读</li>
+<li>r-x -&gt;可读可执行</li>
+</ul>
+<p>chmod u=rwx 1.py</p>
+<p>文件拥有者可读可写可执行</p>
+<h3 id="数字法设置权限"><a href="#数字法设置权限" class="headerlink" title="数字法设置权限"></a>数字法设置权限</h3><ul>
+<li>r -&gt; 4</li>
+<li>w -&gt; 2</li>
+<li>x -&gt; 1</li>
+<li>1可执行</li>
+<li>2可写</li>
+<li>3可写可执行</li>
+<li>4可读</li>
+<li>5可读可执行</li>
+<li>6可读可写</li>
+<li>7可读可写可执行</li>
+</ul>
+<p>u文件拥有者、g同组、o其他</p>
+<p>chmod 731 1.py</p>
+<p>拥有者7 同组3 其他1</p>
+<h2 id="Vim"><a href="#Vim" class="headerlink" title="Vim"></a>Vim</h2><p>命令模式—i-a–&gt;编辑（插入）模式—:—&gt;末行模式</p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><ul>
+<li>yy 拷贝光标所在一行</li>
+<li>4yy 拷贝光标所在行向下的四行</li>
+<li>dd 剪切光标所在一行</li>
+<li>dw 删除单词</li>
+<li>3dd 剪切光标所在行向下的三行</li>
+<li>p 粘贴</li>
+<li><p>r 替换 R 替换光标之后的内容</p>
+</li>
+<li><p>i 插入（光标前） I（行首）</p>
+</li>
+<li>a 插入（后） I（行末）</li>
+<li><p>o 下一行 O上一行</p>
+</li>
+<li><p>h左 j下 k上 l右</p>
+</li>
+<li><p>M当前屏幕中间呢 H当前屏幕上方 L当场屏幕下方</p>
+</li>
+<li><p>ctrl+f向下翻一页 ctrl+b向上翻一页</p>
+</li>
+<li><p>ctrl+d向下翻一页 ctrl+u向上翻一页</p>
+</li>
+<li><p>20G 快速定位到第20行代码 G快速定位到整个代码末尾 gg快速定位到整个代码第一行</p>
+</li>
+<li><p>w 向后跳一个单词的长度，即跳到下一个单词的开始处</p>
+</li>
+<li><p>b 向前跳一个单此的长度，即跳到上一个单词的开始处</p>
+</li>
+<li><p>D 从当前光标开始，向后的剪切</p>
+</li>
+<li><p>u 撤销</p>
+</li>
+<li><p>ctrl+r 反撤销</p>
+</li>
+<li><p>d0 从当前光标开始剪切直到行首</p>
+</li>
+<li><p>x 删除当前的光标</p>
+</li>
+<li><p>X 删除当前的光标前面的字符</p>
+</li>
+<li><p>V，v选中一片代码</p>
+</li>
+<li><code>&gt;&gt;</code> 向右移动代码 <code>&lt;&lt;</code>向左移动代码</li>
+<li><p>. 重复执行代码</p>
+</li>
+<li><p>{ 按段移动（上移）} 按段移动（下移）</p>
+</li>
+<li>shift+zz 相当于wq</li>
+</ul>
+<h3 id="末行模式"><a href="#末行模式" class="headerlink" title="末行模式"></a>末行模式</h3><ul>
+<li>w 保存 q 退出 wq 保存并退出</li>
+<li>/ 搜索</li>
+<li>:%s/hello/hi/g  将hello替换为hi（%相当于整篇文章）</li>
+<li>:11,16%s/hello/hi/g  将11-16行hello替换为hi</li>
+</ul>
+<h2 id="Python学习"><a href="#Python学习" class="headerlink" title="Python学习"></a>Python学习</h2><h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h3><p><code>print(&quot;hello world&quot;)</code></p>
+<h3 id="交互模式"><a href="#交互模式" class="headerlink" title="交互模式"></a>交互模式</h3><p>直接输入python，进入Python的交互模式，exit()退出</p>
+<p>python3,ipython,ipython3</p>
+<h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>以#开头注释//单行注释</p>
+<p>使用3个`即```包裹起来的为多行注释</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p><code>score = 100</code></p>
+<p><code>high = input(&quot;请输入你的身高：&quot;)</code></p>
+<p>python2：<code>high = raw_input(&quot;请输入你的身高：&quot;)</code></p>
+<p><code>print(&quot;变能量的值为%s&quot;%high)</code></p>
+<p><code>print(&quot;姓名：%s，年龄：%d&quot;%(name,age))</code> 多个变量输出</p>
+<p><code>if age &gt; 18:</code></p>
+<p>  ####<code>print(&quot;成年&quot;) //空格敏感</code></p>
+<p><code>else:</code></p>
+<p>  ####<code>print(&quot;未成年&quot;)</code></p>
+<p><code>type(a)</code> 检查变量类型</p>
+<p><code>age_num = int(age)</code> 变量类型转换</p>
+<p><code>len(name)</code>字符串长度</p>
+<p><code>import keyword
+keyword.kwlist</code>查看关键字</p>
+<p><code>import random
+random.randint(0,2)</code> 0,1,2 3个随机数</p>
+<p><code>a%b</code>  取余</p>
+<p><code>a//b</code> 取商</p>
+<p><code>a**b = a^b</code> a的b次方</p>
+<p><code>if a&gt;10 or a&lt;5:</code> 或</p>
+<p><code>if a&gt;10 and a&lt;15:</code> 且</p>
+<p><code>if not (a&gt;10 and a&lt;15):</code>  取反</p>
+<p><code>if 条件1:</code></p>
+<p>  ####<code>xxxxxxx</code></p>
+<p>  <code>elif 条件2:</code></p>
+<p>  ####<code>xxxxxxx</code></p>
+<h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><p><code>while num&lt;10:</code>  </p>
+<p>  ####<code>num = num + 1</code></p>
+<p><code>print(num)</code></p>
+<p><code>prit(&quot;*&quot;,end=&quot;&quot;)</code> 打印*号不换行</p>
+<p>遍历字符串</p>
+<p><code>name  = &quot;laowang&quot;</code></p>
+<p><code>for temp in name:</code></p>
+<p>取单个字符</p>
+<p><code>name = &quot;abcde&quot;</code></p>
+<p><code>name[0],name[1],name[2]</code></p>
+<p>切片</p>
+<p><code>name[2:4]</code></p>
+<p><code>name[2:-1:2]</code> 负数代表从后往前数，每隔两个取一个</p>
+<p>[起始位置:终止位置:步长]</p>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p><code>names = [&quot;老王&quot;,&quot;老刘&quot;,&quot;老李&quot;]</code></p>
+<h4 id="列表的CRUD"><a href="#列表的CRUD" class="headerlink" title="列表的CRUD"></a>列表的CRUD</h4><p>增</p>
+<p><code>names.append(&quot;悟空&quot;)</code>//添加新的元素</p>
+<p><code>names.inset(0,&quot;八戒&quot;)</code>//在指定位置插入</p>
+<p><code>names.extends(names2)</code>//合并</p>
+<p>删</p>
+<p><code>names.pop()</code>//删除最后一个</p>
+<p><code>names.remove(&quot;老王&quot;)</code> //从左查找第一个删除</p>
+<p><code>del names[0]</code> //指定下表删除</p>
+<p>改</p>
+<p><code>names[0] = &quot;沙和尚&quot;</code></p>
+<p>查</p>
+<p><code>if &quot;悟空&quot; in names</code></p>
+<h4 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h4><p><code>for num in nums:</code></p>
+<p>####<code>print(num)</code></p>
+<p>  for<br>  else<br>  for执行完执行else</p>
+<h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><p>info = {键:值,键:值,键:值,键:值}</p>
+<h4 id="字典的CRUD"><a href="#字典的CRUD" class="headerlink" title="字典的CRUD"></a>字典的CRUD</h4><p>增</p>
+<p><code>info[&quot;age&quot;] = 18</code></p>
+<p>删</p>
+<p><code>del info[&quot;age&quot;]</code></p>
+<p>改</p>
+<p><code>info[&quot;age&quot;] = 29</code></p>
+<p>查</p>
+<p><code>info[&quot;name&quot;]</code></p>
+<p><code>info.get(&quot;name&quot;)</code> //若无程序也不会崩溃</p>
+<h4 id="字典的操作"><a href="#字典的操作" class="headerlink" title="字典的操作"></a>字典的操作</h4><p><code>len(info)</code> //键值对的个数</p>
+<p><code>info.keys()</code> //返回列表，字典中所有的键</p>
+<p><code>info.value()</code> //返回列表，字典中所有的值</p>
+<p><code>info.items()</code> //返回元组列表，字典中所有的键和值</p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p><code>(33,)</code> &lt;– 元组只有一个元素，则有逗号才叫元组<br><code>num = (1,2,3)</code></p>
+<p>元足与列表类似,但是不能修改</p>
+<p><code>a = (1,2)</code></p>
+<p><code>b,c = a</code></p>
+<p>则b=1,c=2</p>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p><code>def function():</code></p>
+<p><code>def function(num1,num2):</code></p>
+<p>返回值:return</p>
+<p>函数的四种类型：</p>
+<ul>
+<li>没有参数，没有返回值</li>
+<li>有参数，没有返回值</li>
+<li>没有参数，有返回值</li>
+<li>有参数，有返回值</li>
+</ul>
+<h4 id="缺省参数"><a href="#缺省参数" class="headerlink" title="缺省参数"></a>缺省参数</h4><p>  <code>def fun(a,b=11)</code></p>
+<p>  <code>def fun(a,b,*args)</code></p>
+<p>  <code>def fun(a,b,*args,**kwargs)</code></p>
+<p>  <code>fun(11,22,33,task=88,done=77)</code></p>
+<p>  <code>fun(11,22,33,*88,**77)</code></p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>局部变量、全局变量</p>
+<p>使用global用来对一个全局变量的声明,那么则不是定义一个局部变量，而是对全局变量进行修改。</p>
+<p><code>global tem</code></p>
+<p><code>tem = 12</code></p>
+<p>列表、字典为全局变量，不需要加global</p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>python中的等号，都是引用</p>
+<p><code>a=100</code></p>
+<p><code>b=a</code></p>
+<p>会发现id相同</p>
+<p><code>id(a)==id(b)</code></p>
+<h3 id="可变、不可变类型"><a href="#可变、不可变类型" class="headerlink" title="可变、不可变类型"></a>可变、不可变类型</h3><p>可变类型：//不允许当字典的key值</p>
+<ul>
+<li>列表</li>
+<li>字典</li>
+</ul>
+<p>不可变类型：</p>
+<ul>
+<li>数字类型</li>
+<li>字符串类型</li>
+<li>元组</li>
+</ul>
+<h3 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h3><h3 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h3><p>  <code>lambda 参数:式子</code></p>
+<p>  <code>func = lambda x,y:x+y</code></p>
+<p>  <code>func(1,2)</code></p>
+<p>  <code>func_new = input(&quot;请输入一个匿名函数：&quot;)</code></p>
+<p>  <code>func_new = eval(func_new)</code> //在pythpon2中不需要这一步，而在python3中需要</p>
+<p>  <code>test(1,2,func_new)</code></p>
+<p>交换a，b方式2</p>
+<p><code>a = a + b</code></p>
+<p><code>b = a - b</code></p>
+<p><code>a = a - b</code></p>
+<p><code>num = [100]</code></p>
+<p><code>num = num + num</code> //让num指向了一个新的值</p>
+<p><code>num += num</code> //num指向直接修改</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p><code>mystr.find(str,start = 0,end = len(mystr))</code></p>
+<p><code>mystr.index()</code> //若不存在字符串会报错</p>
+<p><code>mystr.count()</code> //字符串在mystr中出现的的次数</p>
+<p><code>mystr.replace(&quot;world&quot;,&quot;WORLD&quot;)</code> //原字符串mystr不变，替换所有，第三个参数替换个数</p>
+<p><code>mystr.split(&quot; &quot;)</code> //返回值为列表</p>
+<p><code>mystr.split()</code>  若不传参数，则按照不可见字符（空格,\t）切割</p>
+<p><code>mystr.capitalize()</code> //第一个字母大写</p>
+<p><code>mystr.title()</code>   //所有字母开头大写</p>
+<p><code>mystr.splitlines()</code></p>
+<h3 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h3><h4 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h4><p><code>f = open(&quot;test.txt&quot;,&quot;w&quot;)</code></p>
+<h4 id="写数据"><a href="#写数据" class="headerlink" title="写数据"></a>写数据</h4><p><code>f.write(&quot;hello world!&quot;)</code></p>
+<h4 id="读数据"><a href="#读数据" class="headerlink" title="读数据"></a>读数据</h4><p><code>f.read()</code>   </p>
+<p><code>f.readlines()</code></p>
+<h4 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h4><p><code>f.close()</code></p>
+<h4 id="案例：复制txt文件"><a href="#案例：复制txt文件" class="headerlink" title="案例：复制txt文件"></a>案例：复制txt文件</h4><p>步骤：</p>
+<ul>
+<li>获取要复制的文件名input()</li>
+<li>打开这个文件(“r”)</li>
+<li>创建一个文件 xxx[复件].txt</li>
+<li>从原文中读取数据</li>
+<li>将读取的数据写入到新文件中</li>
+<li>关闭两个文件</li>
+</ul>
+<h4 id="定位读写"><a href="#定位读写" class="headerlink" title="定位读写"></a>定位读写</h4><p><code>f.tell()</code></p>
+<p><code>f.seek(offset,from)</code></p>
+<ul>
+<li>offset 偏移量</li>
+<li>from 方向 0:表示文件开头1:表示当前位置2:表示文件末尾</li>
+</ul>
+<h3 id="文件相关操作"><a href="#文件相关操作" class="headerlink" title="文件相关操作"></a>文件相关操作</h3><h4 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h4><p><code>import os</code></p>
+<p><code>os.rename(&quot;xx.txt&quot;,&quot;abc.txt&quot;)</code></p>
+<p><code>os.remove(&quot;xx.txt&quot;)</code></p>
+<p><code>os.mkdir(&quot;haha&quot;)</code></p>
+<p><code>os.getcwd()</code> //获取当前路径</p>
+<p><code>os.chdir()</code> //改变默认路径</p>
+<p><code>os.listdir()</code> //获取目录列表</p>
+<p><code>os.rmdir(&quot;haha&quot;)</code> //删除文件夹</p>
+<h4 id="批量修改文件名"><a href="#批量修改文件名" class="headerlink" title="批量修改文件名"></a>批量修改文件名</h4><p><code>import os</code></p>
+<p>//获取一个要重命名的文件夹的名字</p>
+<p><code>folder_name = input(&quot;请输入要重命名的文件夹：&quot;)</code></p>
+<p>//获取那个个文件夹中所有的文件名字</p>
+<p><code>file_names = os.listdir(folder_name)</code></p>
+<p><code>os.chdir(folder_name)</code></p>
+<p>//对获取的名字进行重命名</p>
+<p><code>for name in file_names:</code></p>
+<p>####<code>os.rename(&quot;name&quot;,&quot;[xx出品]-&quot;+name)</code></p>
+<p>or</p>
+<p>####<code>os.rename(&quot;./&quot;+folder_name+&quot;/&quot;+&quot;name&quot;,&quot;./&quot;+folder_name+&quot;/&quot;+&quot;[xx出品]-&quot;+name)</code></p>
+<h3 id="面向对象OO（object-oriented）"><a href="#面向对象OO（object-oriented）" class="headerlink" title="面向对象OO（object-oriented）"></a>面向对象OO（object-oriented）</h3><h4 id="面向过程"><a href="#面向过程" class="headerlink" title="面向过程"></a>面向过程</h4><p>stu_a = {<br>        “name”:”A”,<br>        “age”:18,<br>        “gender”:1,<br>}</p>
+<h4 id="类，对象"><a href="#类，对象" class="headerlink" title="类，对象"></a>类，对象</h4><p>类名、类的属性、类的方法</p>
+<p><code>class cat:</code></p>
+<h1 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h1><p>####<code>def __init__(self,new_name,new_age):</code> //初始化对象</p>
+<p>########<code>self.name = new_name</code></p>
+<p>########<code>self.age = new_age</code></p>
+<p>####<code>def __str__(self):</code> //初始化对象</p>
+<p>########<code>return &quot;%s的年龄是%d&quot;%(self.name.self.age)</code>  </p>
+<p>#方法</p>
+<p>####<code>def eat(self):</code></p>
+<p>########<code>print(&quot;1&quot;)</code></p>
+<p>####<code>def drink(self):</code></p>
+<p>########<code>print(&quot;2&quot;)</code></p>
+<p>创建类对象</p>
+<p><code>tom = Cat(&quot;汤姆&quot;，10)</code></p>
+<p><code>tom.eat()</code></p>
+<p><code>tom.drink()</code></p>
+<p>//<code>tom.name = &quot;汤姆&quot;</code></p>
+<p>//<code>tom.age = 4</code></p>
+<p>魔法方法</p>
+<p><code>__init__</code>方法：完成初始化功能</p>
+<p><code>__str__</code>方法：print(tom) —&gt; 打印<strong>str</strong>方法</p>
+<p>保护对象的属性</p>
+<p>setter，getter</p>
+<p>私有方法   //私有方法、私有属性不会被继承</p>
+<p><code>def __test1(self):</code> 验证条件满足后在公有方法中调用</p>
+<p><code>__del__</code>方法：对象被删除时调用</p>
+<p><code>import sys</code></p>
+<p><code>sys.getrefcount()</code> 测量到一个对象的引用计数（比实际大1）</p>
+<p>继承父类</p>
+<p><code>class Cat(Aimal):</code></p>
+<p>调用父类方法</p>
+<p><code>父类名.方法（self）</code></p>
+<p><code>super().方法()</code></p>
+<p>多继承</p>
+<p><code>class C(A,B):</code></p>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>类属性、实例属性</p>
+<ul>
+<li>类属性：所属于类对象，并且多个实例对象之间共享同一个类属性， 类名.属性名调用。</li>
+<li>实例属性：和具体的某个实例对象有关系，并且和一个实例对象和另外一个实例对象是不共享属性的。</li>
+</ul>
+<p>类方法、实例方法、静态方法</p>
+<p>类方法:可以通过类的名字调用类方法，还可以通过这个类创建出来的对象，去调用这个类方法。</p>
+<p>//@ 装饰器</p>
+<p><code>@classmethod</code></p>
+<p><code>def add_num(cls)</code></p>
+<p>静态方法:类方法、实例方法必须有参数，静态参数可以没有参数，完成一些基本的操作。</p>
+<p><code>@staticmethod</code></p>
+<p><code>def menu()</code></p>
+<p><code>__new__(cls)</code>方法</p>
+<ul>
+<li>调用<strong>new</strong>方法来创建对象，然后找了一个变量来接收<strong>new</strong>的返回值，这个返回值表示创建出来的对象的引用</li>
+<li><code>__init__</code>（刚刚创建出来的对象的引用）</li>
+<li>返回对象的引用</li>
+</ul>
+<p>//new方法只用于创建，init方法只用于初始化</p>
+<h3 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h3><p><code>def __new__(cls)</code></p>
+<p>####<code>__instance = None</code></p>
+<p>####<code>if cls.__instance == None:</code></p>
+<p>########<code>cls.__instance = object.__new__(cls)</code></p>
+<p>########<code>return object.__new__(cls)</code></p>
+<p>####<code>else:</code></p>
+<p>########<code>return cls.__instance</code>//return 上一次创建的对象的引用</p>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p><code>try:</code></p>
+<p><code>except 异常的名字（NameError|FileNotFoundError|Exception as ret）:</code></p>
+<p>####<code>print(&quot;出现了异常后的处理&quot;)</code></p>
+<p>//raise引发一个你定义的异常<br><code>raise ShortInputException(len(s),3)</code></p>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><p><code>import random</code></p>
+<p><code>import os</code></p>
+<p><code>from random import randint</code></p>
+<p><code>randint()</code></p>
+<p><code>from random import *</code></p>
+<p>当你导入一个模块时，将会将这个模块执行一遍</p>
+<p><code>if __name__ == &#39;__main__&#39;:</code></p>
+<p>####<code>main()</code></p>
+<p>在模块内加入全局变量</p>
+<p><code>__all__ = [&quot;test1&quot;,&quot;test2&quot;]</code></p>
+<h3 id="包"><a href="#包" class="headerlink" title="包"></a>包</h3><p><code>touch TestMsg/__init__.py</code></p>
+<p><code>__all__ = [&quot;sendMsg&quot;]</code></p>
+<p><code>from . import sendMsg</code></p>
+<h3 id="给程序传参数"><a href="#给程序传参数" class="headerlink" title="给程序传参数"></a>给程序传参数</h3><p><code>import sys</code></p>
+<p><code>print(sys.argv)</code></p>
+<p><code>name = sys.argv[1]</code></p>
+<h3 id="列表推导式"><a href="#列表推导式" class="headerlink" title="列表推导式"></a>列表推导式</h3><p><code>for i in range(10,78):</code></p>
+<p>用法类似切片，返回值为列表</p>
+<p><code>xxx[1:2:1]</code></p>
+<h4 id="range的风险"><a href="#range的风险" class="headerlink" title="range的风险"></a>range的风险</h4><p>python2中占用内存空间过大</p>
+<h4 id="列表生成式"><a href="#列表生成式" class="headerlink" title="列表生成式"></a>列表生成式</h4><p><code>a = [i for i in range(1,18)]</code></p>
+<p><code>b = [i for i in range(10) if i%2 == 0]</code></p>
+<p><code>c = [(i,j) for i in range(3) for j in range(2)]</code></p>
+<h3 id="set集合"><a href="#set集合" class="headerlink" title="set集合"></a>set集合</h3><p><code>a = {11,22,33,44,55,66}</code> //不能存储相同的</p>
+<p><code>f = set(a)</code> //a为列表</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143269"></script>
+    <!-- UY END -->
+
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2017. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
