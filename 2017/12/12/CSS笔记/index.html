@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      CSS笔记 | 初风 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="LorenSun">
+    
+    
+
+    <meta name="description" content="CSS引入方式1）（最常用）在元素下引入：【  】2）在CSS文件中导入【 @import url(xx.css) 】（语句需写在css文件的开头）3）在style元素下写样式【 … 】4）在元素标签里直接设定 【  】 元素选择器eg. HTML中元素 ，在CSS中选中该元素改变样式：【 p{…} 】 类选择器与ID选择器类选择器：eg. CSS中用“.”号选中该类【 .a{…} 】若某元素同时">
+<meta name="keywords" content="css,web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS笔记 | 初风">
+<meta property="og:url" content="http://likebreeze.com/2017/12/12/CSS笔记/index.html">
+<meta property="og:site_name" content="初风">
+<meta property="og:description" content="CSS引入方式1）（最常用）在元素下引入：【  】2）在CSS文件中导入【 @import url(xx.css) 】（语句需写在css文件的开头）3）在style元素下写样式【 … 】4）在元素标签里直接设定 【  】 元素选择器eg. HTML中元素 ，在CSS中选中该元素改变样式：【 p{…} 】 类选择器与ID选择器类选择器：eg. CSS中用“.”号选中该类【 .a{…} 】若某元素同时">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-12T01:35:31.856Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CSS笔记 | 初风">
+<meta name="twitter:description" content="CSS引入方式1）（最常用）在元素下引入：【  】2）在CSS文件中导入【 @import url(xx.css) 】（语句需写在css文件的开头）3）在style元素下写样式【 … 】4）在元素标签里直接设定 【  】 元素选择器eg. HTML中元素 ，在CSS中选中该元素改变样式：【 p{…} 】 类选择器与ID选择器类选择器：eg. CSS中用“.”号选中该类【 .a{…} 】若某元素同时">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">初风</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          无论眼界多高，也必须脚踏实地。无论梦想和愿望是多么高远，现实中的每一天都要竭尽全力踏实重复简单的工作。
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">CSS笔记</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-12-12" class="post-meta__date date">2017-12-12</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/css/">css</a>, <a class="tags-link" href="/tags/web/">web</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="CSS引入方式"><a href="#CSS引入方式" class="headerlink" title="CSS引入方式"></a>CSS引入方式</h2><p>1）（最常用）在<head>元素下引入：【 <link rel="stylesheet" href="xx.css"> 】<br>2）在CSS文件中导入【 @import url(xx.css) 】（语句需写在css文件的开头）<br>3）在style元素下写样式【 <style>…</style> 】<br>4）在元素标签里直接设定 【 <p style="color: red"></p> 】</head></p>
+<h2 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h2><p>eg. HTML中元素 </p><p></p>，在CSS中选中该元素改变样式：【 p{…} 】<p></p>
+<h2 id="类选择器与ID选择器"><a href="#类选择器与ID选择器" class="headerlink" title="类选择器与ID选择器"></a>类选择器与ID选择器</h2><h3 id="类选择器："><a href="#类选择器：" class="headerlink" title="类选择器："></a>类选择器：</h3><p>eg. <div class="a"></div><br>CSS中用“.”号选中该类【 .a{…} 】<br>若某元素同时属于多个类 eg. <div class="a"></div><br>CSS中用紧挨着多个“.”号选中【 .a.b{…} 】（若之间有空格如.a .b则含义为选中类a下的类b元素）</p>
+<h3 id="ID选择器："><a href="#ID选择器：" class="headerlink" title="ID选择器："></a>ID选择器：</h3><p>eg. <div id="a"></div><br>CSS中用“#”号选中 【 #a{…} 】</p>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>eg. <button title="abc"></button><br>1)用“【xx】”选中含有xx属性的元素<br>【 [title]{…} 】<br>2)用“ 【xx=”yy”】 ”选中xx属性为”yy”的元素<br>【 [title=”abc”]{…} 】<br>3)用“ 【xx<em>=”yy”】 ”选中xx属性包含”yy”的元素<br>【 [title</em>=”a”]{…} 】<br>4)用“ 【xx^=”yy”】 ”选中xx属性最前面一部分内容为”yy”的元素<br>【 [title^=”a”]{…} 】<br>5)用“ 【xx$=”yy”】 ”选中xx属性最后面一部分内容为”yy”的元素<br>【 [title$=”c”]{…} 】</p>
+<h2 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h2><p>CSS中用空格隔开的类选择器选中某元素的某后代元素<br>eg. 选中类a下所有的类b后代：【 .a .b{…} 】<br>用“<em>”表示某元素的所有后代元素（单独“</em>”号则代表页面中所有元素）<br>【 .a * {…} 】</p>
+<h2 id="相邻选择器及通用相邻选择器"><a href="#相邻选择器及通用相邻选择器" class="headerlink" title="相邻选择器及通用相邻选择器"></a>相邻选择器及通用相邻选择器</h2><p>1）用“+”来选择紧接在某元素后的一个元素（二者要有相同的父元素）<br>eg.选择类a的后一个相邻的兄弟div：【 .a + div {…} 】<br>2）用“~”来选择紧接在某元素后的所有元素（二者要有相同的父元素）<br>eg.选择类a后面所有的兄弟div：【 .a ~ div {…} 】</p>
+<h2 id="伪类"><a href="#伪类" class="headerlink" title="伪类"></a>伪类</h2><p>用“:”来选择某伪类</p>
+<p>常用伪类eg.<br>【 a:link {…} //未访问过的链接 】<br>【 a:visited {…} //已访问过的链接 】<br>【 a:hover {…} //鼠标移动到链接上 】<br>【 a:active {…} //鼠标点击链接瞬间 】<br>【 input:focus {…} //鼠标选中输入框 】</p>
+<p>（ps： a:hover 必须被置于 a:link 和 a:visited 之后，a:active 必须被置于 a:hover 之后）</p>
+<h2 id="伪元素"><a href="#伪元素" class="headerlink" title="伪元素"></a>伪元素</h2><p>用“:”或“::”来选择某伪元素</p>
+<p>常用伪元素eg.<br>【 p:first-leter {…} //段落的首字母 】<br>【 h1:before {content:”xx”;} //在h1元素前插入内容“xx”】<br>【 h1:after {content:”xx”;} //在h1元素后插入内容“xx”】</p>
+<h2 id="选择器权重"><a href="#选择器权重" class="headerlink" title="选择器权重"></a>选择器权重</h2><p>style属性（内联） &gt; ID选择器 &gt; 类选择器/属性选择器/伪类选择器 &gt; 元素选择器</p>
+<h2 id="字体属性"><a href="#字体属性" class="headerlink" title="字体属性"></a>字体属性</h2><p>常用举例：<br>字体类型【 font-family: “微软雅黑”, “Microsoft Yahei”; 】（用”,”隔开多个值将会从前往后找，直到找到匹配字体，找不到则为默认字体）<br>字体粗细（字重）【 font-weight: xx(100~900之间的一个值); 】<br>字体大小【 font-size: 1**x / xx%(母元素的百分比大小); 】</p>
+<h2 id="文字属性"><a href="#文字属性" class="headerlink" title="文字属性"></a>文字属性</h2><p>常用举例：<br>对齐方式【 text-align: left(左对齐)/right(右对齐)/center(居中)/justify(两段对齐); 】<br>行高【 line-height: 1.3(文字倍数)/ 10px(像素表示); 】<br>文字装饰【 text-decoration: underline(下划线)/overline(上划线)/line-through(删除线); 】</p>
+<h2 id="display属性"><a href="#display属性" class="headerlink" title="display属性"></a>display属性</h2><p>1）显示为块级元素（与母元素同宽，padding填充上下有效） 【 display: block; 】<br>2）显示为行内元素（可随别的元素浮动，padding填充上下无效）【 display: inline; 】<br>3）显示为行内块元素（既具有块级元素属性又可浮动）【 display: inline-block; 】</p>
+<h2 id="框"><a href="#框" class="headerlink" title="框"></a>框</h2><p>由外至里：外边框margin&gt;边框border&gt;内边框padding&gt;内容区content</p>
+
+  </section>
+
+  <section class="post-comments">
+
+    <!-- 将评论系统（例如Disqus、多说、友言、畅言等）提供的代码片段粘贴在这里 -->
+    <!-- UY BEGIN -->
+    <div id="uyan_frame"></div>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2143269"></script>
+    <!-- UY END -->
+
+</section>
+
+
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2017. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
